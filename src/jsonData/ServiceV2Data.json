@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "thumb": "4.png",
+        "text": "Evaluate service quality and compliance",
+        "serviceName": "Mystery Audit",
+        "tag": "Auditing",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    },
+    {
+        "id": 2,
+        "thumb": "5.png",
+        "text": "Hassle-free tax compliance",
+        "serviceName": "GST Registration & Filing",
+        "tag": "Auditing",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    },
+    {
+        "id": 3,
+        "thumb": "6.png",
+        "text": "Expert tax solutions",
+        "serviceName": "Income Tax Return & TDS",
+        "tag": "Auditing",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    },
+    {
+        "id": 4,
+        "thumb": "7.png",
+        "text": "Legal business setup",
+        "serviceName": "Company Startup Registrations",
+        "tag": "Auditing",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    },
+    {
+        "id": 5,
+        "thumb": "8.png",
+        "text": "Comprehensive licensing solutions",
+        "serviceName": "All Types of Registrations",
+        "tag": "Auditing",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    },
+    {
+        "id": 6,
+        "thumb": "9.png",
+        "text": "Ensuring financial and operational efficiency",
+        "serviceName": "Process-Based Audits",
+        "tag": "Auditing",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    }
+]

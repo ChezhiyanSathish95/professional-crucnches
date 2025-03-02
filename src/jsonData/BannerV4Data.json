@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "thumb": "6.jpg",
+    "subTitle": "Professional Crunches",
+    "title": "Hire Verified Finance Experts & Compliance Professionals",
+    "text": "Connecting businesses with 20,000+ top-tier finance professionals across 1,000+ cities.",
+    "btnText": "Hire an Expert",
+    "btnLink": "contact-us",
+    "shape": "banner-shape.png"
+  },
+  {
+    "id": 2,
+    "thumb": "8.jpg",
+    "subTitle": "Professional Crunches",
+    "title": "Value Addition Through Best Practices & Proactive Approach",
+    "text": "A Perfect Move Can Change Any Business",
+    "btnText": "Get Started",
+    "btnLink": "contact-us",
+    "shape": "banner-shape.png"
+  }
+]

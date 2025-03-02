@@ -1,0 +1,142 @@
+/* Register Form Styles */
+.register-form-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+.register-form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .register-form-container .title {
+    font-size: 28px;
+    color: #fb8437;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .register-form-container .title::before, .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #fb8437;
+  }
+  
+  .register-form-container .title::before {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .register-form-container .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .register-form-container .form label {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    color: #2a2929 !important;
+  }
+  
+  .register-form-container .form label .input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #2a2929;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .register-form-container .form label .input:focus {
+    border-color: #fb8437;
+  }
+  
+  .register-form-container .form label span {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: #2a2929;
+    font-size: 14px;
+    transition: 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .form label .input:focus + span,
+  .form label .input:valid + span {
+    top: -20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fb8437;
+  }
+  
+  .register-form-container .submit {
+    border: none;
+    outline: none;
+    background-color: #fb8437;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .register-form-container .submit:hover {
+    background-color: #2a2929;
+  }
+  
+  .register-form-container .signin {
+    text-align: center;
+    font-size: 14px;
+    color: #2a2929;
+  }
+  
+  .register-form-container .signin a {
+    color: #fb8437;
+    text-decoration: none;
+  }
+  
+  .register-form-container .signin a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  
+
+  .up-label{
+    top:-24px !important;
+   color: #2a2929 !important;
+  
+  }
+
+  .radio-group label{
+    margin-bottom: 0px !important;
+  }

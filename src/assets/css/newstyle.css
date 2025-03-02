@@ -1,0 +1,133 @@
+
+/* colors */
+/* primarycolor: #ffd440;
+secondarycolor: #fb8437;
+thirdcolor: #2a2929 */
+
+
+
+nav.navbar.validnavs.no-background{
+    background-color: #2a2929 !important;
+}
+nav.navbar.validnavs{
+    background-color: #2a2929 !important;
+}
+
+.navbar-header{
+    width: 150px;
+}
+
+.navbar-brand img{
+    width: 130px;
+    height: 105px;
+    object-fit: cover;
+}
+
+.dropdown-toggle{
+    color: #ffd440 !important;
+}
+.dropdown-toggle:hover{
+    color: #fb8437 !important;
+}
+.dropdown .active{
+    color: #ffffff !important;
+}
+
+.fa-search{
+    color: #ffd440 !important;
+}
+
+.navbar .attr-nav .side-menu span{
+    background: #ffd440 !important;
+}
+
+.contact-new a{
+    color: #ffd440 !important;
+}
+.contact-new a:hover{
+    color: #fb8437 !important;
+}
+
+.banner-tag{
+    color: #ffffff !important;
+    font-size: 18px !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    letter-spacing: 4px !important;
+}
+.banner-title {
+    background: linear-gradient(90deg, #ffd440 , #fb8437);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder !important;
+}
+
+.banner-button{
+    background: linear-gradient(45deg, #ffd440, #fb8437) !important;
+            color: #2a2929 !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+}
+
+.banner-box{
+    width: 65%!important;
+}
+
+.about-two-info .sub-title{
+       background: linear-gradient(90deg, #000000 , #2a2929);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+}
+.about-two-info .title{
+       background: linear-gradient(90deg, #ffd440 , #fb8437);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-two-info .about-text{
+    color: #2a2929 !important;
+    font-size: 16px !important;
+    line-height: 28px !important;
+    text-align: justify !important;
+}
+
+.about-two-thumb::after{
+    background: linear-gradient(90deg, #ffd440 , #fb8437);
+    
+}
+.about-two-thumb::before{
+    background: linear-gradient(90deg, #fb8437 , #fb8437);
+    
+}
+
+.about-two-thumb .experience::after{
+    background: linear-gradient(90deg, #ffd440 , #fb8437);
+}
+
+.st-home-services{
+    background: linear-gradient(90deg, #000000 , #2a2929);
+}
+.st-services-color{
+    background: linear-gradient(90deg, #ffd440 , #fb8437) !important;
+}
+
+.st-services-color .sub-title{
+    color: #2a2929;
+    letter-spacing: 4px;
+}
+.st-services-color .title{
+    color: #2a2929;
+}
+.st-services-color .st-ser-btn a{
+    background-color: #2a2929;
+    color: #ffffff;
+}
+
+.icon-btn{
+    background:linear-gradient(90deg, #ffd440 , #fb8437) !important;
+}
+
+.service-style-two-heading {
+    padding: 63px 56px;
+}
