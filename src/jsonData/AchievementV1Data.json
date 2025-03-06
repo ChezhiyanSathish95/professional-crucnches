@@ -2,15 +2,22 @@
     {
         "id": 1,
         "icon": "flaticon-startup-6",
-        "end": 500,
-        "info1": "Business advices given",
-        "info2": "over 30 years"
+        "end": 10,
+        "info1": "Years of Experience"
+        
     },
     {
         "id": 2,
         "icon": "flaticon-team",
-        "end": 30,
-        "info1": "Business Excellence",
-        "info2": "awards achieved"
+        "end": 70,
+        "info1": "Consultants"
+       
+    },
+    {
+        "id": 3,
+        "icon": "flaticon-team",
+        "end": 40,
+        "info1": "Associate office - PAN India "
+       
     }
 ]

@@ -9,7 +9,7 @@ const RegisterPage = () => {
     return (
         <>
             <HeaderV4 />
-            <BreadCrumb breadCrumb="Register" title1="Committed to" title2="giving the best price" bottomSpace="pb-0" />
+            <BreadCrumb breadCrumb="Register" title1="Get Started with Expert Financial &" title2="Compliance Solutions Today!" bottomSpace="pb-0" />
             <RegisterForm />
             <FooterV1 />
         </>

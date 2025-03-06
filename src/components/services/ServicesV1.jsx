@@ -10,15 +10,16 @@ const ServicesV1 = () => {
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
                             <div className="site-heading text-center">
-                                <h5 className="sub-title">Service were offering</h5>
-                                <h2 className="title">Turn Information <br /> Into Actionable Insights</h2>
+                                <h5 className="sub-title">Our Services
+                                </h5>
+                                <h2 className="title">We deliver customized solutions</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="container">
                     <div className="row">
-                        {ServiceV1Data.slice(0, 3).map(service =>
+                        {ServiceV1Data.slice(0, 11).map(service =>
                             <div className="col-xl-4 col-lg-6 col-md-6 mb-30" key={service.id}>
                                 <SingleServicesV1 service={service} />
                             </div>

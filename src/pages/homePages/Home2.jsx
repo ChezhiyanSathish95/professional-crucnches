@@ -18,16 +18,15 @@ const Home2 = () => {
   return (
     <>
       <div className="wrapper">
-        <HeaderV4 />
+      <HeaderV4 />
         <BannerV4 />
         <AboutV2 />
-        <ServicesV2 />
-        <TestimonialV2 />
         <WhyChooseUsV2 />
-        <TeamV2 />
-        <Experience />
         <BrandV1 />
-        <ContactV1 />
+        <ServicesV2 />
+        <Experience />
+        <TeamV2 />
+        <TestimonialV2 />
         <BlogV1 />
         <FooterV1 />
       </div>

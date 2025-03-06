@@ -13,12 +13,13 @@ const Services = () => {
     return (
         <>
            <HeaderV4 />
-            <BreadCrumb breadCrumb="services" title1="Turn Information" title2="Into Actionable Insights" />
+            <BreadCrumb breadCrumb="services" title1="Comprehensive Financial &
+" title2="Compliance Solutions" />
             <ServicesV1 />
-            <WhyChooseUsV1 />
+            {/* <WhyChooseUsV1 />
             <PriceV1 priceClass="default-padding bg-gray" />
             <TestimonialV1 />
-            <ProcessV1 processClass="default-padding" />
+            <ProcessV1 processClass="default-padding" /> */}
             <FooterV1 />
         </>
     );

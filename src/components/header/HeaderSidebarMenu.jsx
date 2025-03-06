@@ -45,19 +45,20 @@ const HeaderSidebarMenu = ({ isSidebarOpen, removeClasses, addClasses, searchOpe
                                 <li>
                                     <div className="content">
                                         <p>Address</p>
-                                        <strong>California, TX 70240</strong>
+                                        <strong>13/1 Radha Nagar Extension, Kanjampalayam Pirivu,
+                                        Pichampalayam Post, Tirupur, Tamil Nadu - 641603</strong>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="content">
                                         <p>Email</p>
-                                        <strong><a href="mailto:support@validtheme.com" className='color-para'>support@validtheme.com</a></strong>
+                                        <strong><a href="mailto:support@validtheme.com" className='color-para'>professionalcrunches@gmail.com</a></strong>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="content">
                                         <p>Contact</p>
-                                        <strong><a href="tel:+44-20-7328-4499" className='color-para'>+44-20-7328-4499</a></strong>
+                                        <strong><a href="tel:+91 9787707616" className='color-para'>+91 9787707616</a></strong>
                                     </div>
                                 </li>
                             </ul>

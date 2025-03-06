@@ -15,7 +15,7 @@ const BreadCrumb = ({ title1, title2, breadCrumb, bottomSpace, offsetClass }) =>
                                 <nav aria-label="breadcrumb">
                                     <ol className="breadcrumb">
                                         <li><Link to="/#"><i className="fa-solid fa-home"></i> Home</Link></li>
-                                        <li className="active">{breadCrumb ? breadCrumb : "error"}</li>
+                                        <li className="active st-active">{breadCrumb ? breadCrumb : "error"}</li>
                                     </ol>
                                 </nav>
                                 <h1>{title1 ? title1 : "404 Not Found"} <br /> {title2 ? title2 : ""}</h1>

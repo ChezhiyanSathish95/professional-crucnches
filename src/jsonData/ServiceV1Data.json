@@ -1,62 +1,170 @@
 [
     {
         "id": 1,
+        "title": "Mystery Audit",
+        "benefit": "Ensure high service quality and compliance adherence.",
+        "key_offerings": [
+          "Anonymous inspections to evaluate customer service.",
+          "Compliance checks for operational and legal standards.",
+          "Comprehensive reporting with actionable insights."
+        ],
         "icon1": "1.png",
         "icon1Dark": "target.png",
         "thumb": "1-full.jpg",
         "icon2": "fas fa-long-arrow-right",
-        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
-        "title": "Marketing Strategy",
         "serviceLink": "services-details"
-    },
-    {
+      },
+      {
         "id": 2,
+        "title": "GST Registration & Filing",
+        "benefit": "Stay compliant with tax laws and avoid penalties.",
+        "key_offerings": [
+          "GST registration for new businesses.",
+          "Monthly, quarterly, and annual GST return filing.",
+          "GST compliance consultation and audit support."
+        ],
         "icon1": "2.png",
         "icon1Dark": "envelope.png",
         "thumb": "2-full.jpg",
         "icon2": "fas fa-long-arrow-right",
-        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
-        "title": "Enterprise Consulting",
         "serviceLink": "services-details"
-    },
-    {
+      },
+      {
         "id": 3,
+        "title": "Income Tax Return & TDS",
+        "benefit": "Avoid penalties, optimize tax savings, and ensure financial compliance.",
+        "key_offerings": [
+          "Filing of individual and corporate income tax returns.",
+          "TDS calculation, deduction, and return filing.",
+          "Tax advisory and compliance management."
+        ],
         "icon1": "3.png",
         "icon1Dark": "analytics.png",
         "thumb": "3-full.jpg",
         "icon2": "fas fa-long-arrow-right",
-        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
-        "title": "Growth Tracking",
         "serviceLink": "services-details"
-    },
-    {
+      },
+      {
         "id": 4,
+        "title": "Company Startup Registrations",
+        "benefit": "Hassle-free business setup with expert guidance.",
+        "key_offerings": [
+          "Private limited, LLP, and sole proprietorship registrations.",
+          "Assistance with necessary business licenses and certifications.",
+          "Legal documentation and compliance advisory."
+        ],
         "icon1": "4.png",
         "icon1Dark": "4.png",
         "thumb": "4-full.jpg",
         "icon2": "fas fa-long-arrow-right",
-        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
-        "title": "SEO Optimization",
         "serviceLink": "services-details"
-    },
-    {
+      },
+      {
         "id": 5,
+        "title": "All Types of Registrations",
+        "benefit": "Operate legally with streamlined registration services.",
+        "key_offerings": [
+          "MSME, FSSAI, and GST registrations.",
+          "Trademark, IEC (Import-Export Code), and digital signature services.",
+          "Compliance tracking and renewal reminders."
+        ],
         "icon1": "5.png",
         "icon1Dark": "5.png",
         "thumb": "5-full.jpg",
         "icon2": "fas fa-long-arrow-right",
-        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
-        "title": "PPC Advertising",
         "serviceLink": "services-details"
-    },
-    {
+      },
+      {
         "id": 6,
+        "title": "Process-Based Audits",
+        "benefit": "Identify inefficiencies and implement cost-effective solutions.",
+        "key_offerings": [
+          "Accounts & Finances",
+          "Treasury Management",
+          "Costing & Fixed Asset Management",
+          "Research & Development",
+          "Production Planning & Warehouse Management",
+          "Information Systems & IT Audits"
+        ],
         "icon1": "6.png",
         "icon1Dark": "6.png",
         "thumb": "6-full.jpg",
         "icon2": "fas fa-long-arrow-right",
-        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
-        "title": "Digital Marketing",
         "serviceLink": "services-details"
-    }
+      },
+      {
+        "id": 7,
+        "title": "Continuous Assurance Services",
+        "benefit": "Proactive risk mitigation and improved financial control.",
+        "key_offerings": [
+          "Revenue & Payment Assurance",
+          "Branch Control & Statutory Assurance",
+          "Branch Assessment Rating System (BARS)"
+        ],
+        "icon1": "7.png",
+        "icon1Dark": "7.png",
+        "thumb": "7-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "serviceLink": "services-details"
+      },
+      {
+        "id": 8,
+        "title": "Best Accountant (Outsourcing Services)",
+        "benefit": "Cost-effective accounting solutions with skilled professionals.",
+        "key_offerings": [
+          "Onshore & Offshore Accounting Services",
+          "CFO Support Services",
+          "Full/Part-time Accounting Professionals"
+        ],
+        "icon1": "8.png",
+        "icon1Dark": "8.png",
+        "thumb": "8-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "serviceLink": "services-details"
+      },
+      {
+        "id": 9,
+        "title": "Cycle Count & Inventory Management",
+        "benefit": "Minimize losses and optimize inventory control.",
+        "key_offerings": [
+          "Physical Inventory Verification",
+          "Overnight Stock Verification",
+          "Warehouse & Retail Audits"
+        ],
+        "icon1": "9.png",
+        "icon1Dark": "9.png",
+        "thumb": "9-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "serviceLink": "services-details"
+      },
+      {
+        "id": 10,
+        "title": "Consulting Services",
+        "benefit": "Drive business growth with expert insights and structured processes.",
+        "key_offerings": [
+          "Strategic Consulting (Marketing, Business Planning, Inventory Optimization)",
+          "Process Consulting (SOP Preparation & Implementation)"
+        ],
+        "icon1": "10.png",
+        "icon1Dark": "10.png",
+        "thumb": "10-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "serviceLink": "services-details"
+      },
+      {
+        "id": 11,
+        "title": "Fixed Asset Management",
+        "benefit": "Prevent asset loss, improve accountability, and enhance productivity.",
+        "key_offerings": [
+          "Asset Verification, Registering & Tagging",
+          "Barcode, QR Code, RFID Management",
+          "Fixed Asset Management Software"
+        ],
+        "icon1": "11.png",
+        "icon1Dark": "11.png",
+        "thumb": "11-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "serviceLink": "services-details"
+      }
+    
 ]

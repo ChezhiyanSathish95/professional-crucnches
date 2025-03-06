@@ -131,3 +131,7 @@ nav.navbar.validnavs{
 .service-style-two-heading {
     padding: 63px 56px;
 }
+
+.st-active{
+    color: #fb8437 !important;
+}

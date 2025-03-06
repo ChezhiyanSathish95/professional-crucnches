@@ -15,21 +15,24 @@ const ContactInfo = () => {
                     <li className="wow fadeInUp">
                         <div className="content">
                             <h4 className="title">Phone</h4>
-                            <a href="tel:+4733378901">+4733378901</a>
+                            <a href="tel:+4733378901">+91 9787707616
+                            </a>
                         </div>
                     </li>
                     <li className="wow fadeInUp" data-wow-delay="300ms">
                         <div className="info">
                             <h4 className="title">Location</h4>
                             <p>
-                                55 Main Street, The Grand Avenue 2nd Block, New York City
+                            13/1 Radha Nagar Extension, Kanjampalayam Pirivu,
+Pichampalayam Post, Tirupur, Tamil Nadu - 641603
+
                             </p>
                         </div>
                     </li>
                     <li className="wow fadeInUp" data-wow-delay="500ms">
                         <div className="info">
                             <h4 className="title">Official Email</h4>
-                            <a href="mailto:info@digital.com.com">info@digital.com</a>
+                            <a href="mailto:info@digital.com.com"> professionalcrunches@gmail.com </a>
                         </div>
                     </li>
                     <li className="wow fadeInUp" data-wow-delay="700ms">
