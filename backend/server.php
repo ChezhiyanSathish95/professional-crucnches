@@ -1,127 +1,88 @@
 <?php
-
-// Enable error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Start output buffering to prevent mixed content issues
-ob_start();
-
-// Allow CORS
+// Enable CORS
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
-header("Content-Type: application/json");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 // Handle preflight request
-if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
-    http_response_code(204);
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
     exit();
 }
 
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "professional-crunches";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check for DB connection errors
-if ($conn->connect_error) {
-    die(json_encode(["status" => "error", "message" => "Database connection failed: " . $conn->connect_error]));
-}
-
-// Capture raw POST data for debugging
-$debug_log = ["status" => "debug"];
-
 // Handle POST request
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $debug_log["received_data"] = $_POST; // Log incoming data
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
+    // Database credentials
+    $host = 'localhost';
+    $user = 'root';
+    $password = '';
+    $dbname = 'professional-crunches';
 
-    if (empty($_POST)) {
-        die(json_encode(["status" => "error", "message" => "No data received. Check if frontend sends data correctly."]));
+    // Connect to the database
+    $conn = new mysqli($host, $user, $password, $dbname);
+    if ($conn->connect_error) {
+        echo json_encode(['status' => 'error', 'message' => 'Database connection failed: ' . $conn->connect_error]);
+        exit();
     }
-
-    // Required fields
-    $requiredFields = ["name", "email", "phone", "dob", "qualification"];
-    foreach ($requiredFields as $field) {
-        if (empty($_POST[$field])) {
-            die(json_encode(["status" => "error", "message" => "Missing required field: $field"]));
-        }
+    
+    // Retrieve form data
+    $name = $_POST['name'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $phone = $_POST['phone'] ?? '';
+    $dob = $_POST['dob'] ?? '';
+    $qualification = $_POST['qualification'] ?? '';
+    $competencies = $_POST['competencies'] ?? '';
+    $experience = $_POST['experience'] ?? '';
+    $city = $_POST['city'] ?? '';
+    $state = $_POST['state'] ?? '';
+    $address = $_POST['address'] ?? '';
+    $referral = $_POST['referral'] ?? '';
+    $languages = $_POST['languages'] ?? '';
+    $computerskills = $_POST['computerskills'] ?? '';
+    $native = $_POST['native'] ?? '';
+    $laptop = $_POST['laptop'] ?? '';
+    $bike = $_POST['bike'] ?? '';
+    
+    // Handle file uploads
+    $uploadDir = 'uploads/';
+    if (!is_dir($uploadDir)) {
+        mkdir($uploadDir, 0777, true);
     }
-
-    // Sanitize input data
-    $name = $conn->real_escape_string($_POST['name']);
-    $email = $conn->real_escape_string($_POST['email']);
-    $phone = $conn->real_escape_string($_POST['phone']);
-    $dob = $conn->real_escape_string($_POST['dob']);
-    $qualification = $conn->real_escape_string($_POST['qualification']);
-
-    // Handle File Uploads
-    function uploadFile($fileKey, $targetDir)
-    {
-        global $debug_log; // Log errors
-
-        if (!isset($_FILES[$fileKey]) || $_FILES[$fileKey]['error'] !== UPLOAD_ERR_OK) {
-            $debug_log["file_upload_error"][$fileKey] = "File not uploaded.";
-            return null;
+    
+    function uploadFile($fileKey, $uploadDir) {
+        if (!empty($_FILES[$fileKey]['name'])) {
+            $fileName = basename($_FILES[$fileKey]['name']);
+            $targetPath = $uploadDir . $fileName;
+            if (move_uploaded_file($_FILES[$fileKey]['tmp_name'], $targetPath)) {
+                return $targetPath;
+            }
         }
-
-        // Check file type
-        $allowedTypes = ["image/jpeg", "image/png", "application/pdf"];
-        if (!in_array($_FILES[$fileKey]['type'], $allowedTypes)) {
-            $debug_log["file_upload_error"][$fileKey] = "Invalid file type";
-            return null;
-        }
-
-        // Ensure directory exists
-        if (!is_dir($targetDir)) {
-            mkdir($targetDir, 0777, true);
-        }
-
-        $fileName = time() . "_" . basename($_FILES[$fileKey]['name']);
-        $filePath = $targetDir . $fileName;
-
-        if (move_uploaded_file($_FILES[$fileKey]['tmp_name'], $filePath)) {
-            return $filePath;
-        }
-        $debug_log["file_upload_error"][$fileKey] = "Move failed";
         return null;
     }
-
-    $targetDir = "uploads/";
-    $resume = uploadFile('resume', $targetDir);
-    $aadhar = uploadFile('aadhar', $targetDir);
-    $marksheet = uploadFile('marksheet', $targetDir);
-    $photo = uploadFile('photo', $targetDir);
-
-    // Prepare SQL statement
-    $sql = "INSERT INTO users (name, email, phone, dob, qualification, resume, aadhar, marksheet, photo) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-    $stmt = $conn->prepare($sql);
+    
+    $resume = uploadFile('resume', $uploadDir);
+    $marksheet = uploadFile('marksheet', $uploadDir);
+    $aadhar = uploadFile('aadhar', $uploadDir);
+    $photo = uploadFile('photo', $uploadDir);
+    
+    // Insert into database
+    $stmt = $conn->prepare("INSERT INTO registrations (name, email, phone, dob, qualification, competencies, experience, city, state, address, referral, languages, computerskills, native, laptop, bike, resume, marksheet, aadhar, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     if (!$stmt) {
-        die(json_encode(["status" => "error", "message" => "SQL prepare failed: " . $conn->error]));
+        echo json_encode(['status' => 'error', 'message' => 'Failed to prepare statement']);
+        exit();
     }
-
-    // Bind parameters
-    $stmt->bind_param("sssssssss", $name, $email, $phone, $dob, $qualification, $resume, $aadhar, $marksheet, $photo);
-
-    // Execute query
+    
+    $stmt->bind_param("ssssssssssssssssssss", $name, $email, $phone, $dob, $qualification, $competencies, $experience, $city, $state, $address, $referral, $languages, $computerskills, $native, $laptop, $bike, $resume, $marksheet, $aadhar, $photo);
+    
     if ($stmt->execute()) {
-        echo json_encode(["status" => "success", "message" => "Data stored successfully"]);
+        echo json_encode(['status' => 'success', 'message' => 'Registration successful']);
     } else {
-        die(json_encode(["status" => "error", "message" => "Failed to store data: " . $stmt->error]));
+        echo json_encode(['status' => 'error', 'message' => 'Failed to register: ' . $stmt->error]);
     }
-
+    
     $stmt->close();
+    $conn->close();
+} else {
+    echo json_encode(['status' => 'error', 'message' => 'Invalid request method']);
 }
-
-$conn->close();
-
-// Log debugging information
-file_put_contents("debug.log", json_encode($debug_log, JSON_PRETTY_PRINT));
-
-exit();
-?>
